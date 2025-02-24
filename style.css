@@ -1,0 +1,227 @@
+html, body{
+    margin: 0;
+    padding: 0;
+    /* height: 100vh;
+    width: 100%; */
+    font-size: 3vh;
+    background-color: black;
+    color: wheat;
+    font-family: "Funnel Display", serif;
+}
+
+div{
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: center;
+    align-self: center;
+    /* text-align: center; */
+
+}
+
+.main{
+    padding: 0 5vh;
+    display: flex;
+    flex-direction: column;
+    /* z-index: 100; */
+    /* justify-content: center; */
+    /* align-items: center; */
+
+}
+
+.on-top{
+    z-index: 1;
+}
+
+.title{
+    font-size: 6vh;
+    height: 100vh;
+    align-self: flex-start;
+    text-align: start;
+    /* align-items: center; */
+}
+
+
+.mobile{
+    display: none;
+}
+
+.desktop{
+    display: flex;
+}
+
+.cover{
+    top: 0;
+    right: -15vw;
+    /* height: 100vh; */
+    /*padding: 10vh 18vh;
+    z-index: -1;*/
+    padding-left: 0;
+    width: 80vw; height: 100vh; object-fit: cover; object-position: 100% 0;
+
+}
+
+h1, h2, h3, h4, h5, h6{
+    margin: 1vh 0;
+    font-weight: 400;
+    font-family: "Palette Mosaic", serif;
+}
+
+.blink_me {
+    animation: blinker 0.1s ease-in-out infinite;
+    font-size: 100px;
+  }
+  
+  @keyframes blinker {
+    50% {
+      opacity: 0;
+    }
+  }
+
+.pieta{
+    width: 20vw;
+}
+
+.marty{
+    width: 35vw;
+}
+
+.show{
+    font-size: 3vh;
+    /* align-items: center; */
+}
+
+.wyn{
+    height: auto;
+    text-align: center;
+}
+
+.btn{
+    padding: 2.5vh;
+    background-color: wheat;
+    color: black;
+    font-family: "Palette Mosaic", serif;
+    font-size: 80px;
+    text-decoration: none;
+    width: fit-content;
+    text-align: center;
+    transition: all 0.2s ease-in-out;
+}
+
+.btn:hover{
+    color: wheat;
+    background-color: turquoise;
+
+}
+
+ul {
+    list-style-type: none;
+    list-style-position: outside;
+    padding: 0;
+  }
+
+  @media screen and (min-width: 1800px) {
+    .cover{
+        position: fixed;
+        
+    }
+
+    .main{
+        width: 50%;
+    }
+  }
+
+  @media screen and (max-width: 1800px) {
+
+    .main{
+        /* width: 90vw; */
+        padding: 0;
+    }
+
+    .title{
+        background-image: url(./src/img/leg.gif);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        font-size: 5.5vh;
+        width: 100%;
+        /* min-height: 100%; */
+        margin-bottom: 10vh;
+        /* align-items: center; */
+        /* padding: 5vh; */
+    }
+
+    .title  h1, h5{
+        z-index: 100!important;
+        padding-left: 5vh;
+    }
+
+    
+    .cover{
+        display: none;
+    }
+
+    .show{
+        font-size: 3vh;
+        padding: 0 5vh;
+    }
+
+
+
+}
+
+  @media screen and (max-width: 600px) {
+
+
+    .title{
+        z-index: 100!important;
+        text-align: center;
+        color: black;
+    }
+
+    .title h1, h5{
+        padding: 0;
+    }
+
+    h1{
+        font-size: 10vh;
+    }
+
+    h5{
+        font-size: 3vh;
+        color: black;
+
+    }
+
+    .mobile{
+        display: block;
+    }
+
+    .desktop{
+        display: none;
+    }
+    
+    .cover{
+        display: none;
+    }
+
+    .show{
+        font-size: 3vh;
+        width: 85%;
+        padding: 0;
+    }
+
+    .pieta, .marty{
+        width: 100%;
+    }
+
+
+    .blink_me{
+        font-size: 5vh;
+    }
+
+    .btn{
+        font-size: 5vh;
+    }
+
+}
